@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SACVS - Secure Academic Credential Verification System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="theme-toggle-container">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <div class="language-selector">
+        <select id="languageSelect" class="language-dropdown">
+            <option value="en">English</option>
+            <option value="hi">हिंदी</option>
+            <option value="te">తెలుగు</option>
+        </select>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo-container">
+                <i class="fas fa-shield-alt logo-icon"></i>
+                <span class="logo-text">SACV</span>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#about" class="nav-link">About</a>
+            <a href="support.html" class="nav-link">Support</a>
+            <a href="#company" class="nav-link">Company Portal</a>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <div class="hero-section">
+            <div class="hero-content">
+                <div class="hero-animation">
+                    <div class="floating-shield">
+                        <i class="fas fa-certificate"></i>
+                        <div class="pulse-ring"></div>
+                        <div class="pulse-ring delayed"></div>
+                    </div>
+                </div>
+                <h1 class="hero-title">Secure Academic Credential Verification</h1>
+                <p class="hero-subtitle">Blockchain-powered verification system to combat fake degrees and forged certificates</p>
+                
+                <div class="login-container">
+                    <div class="login-card">
+                        <div class="card-header">
+                            <div class="security-badge">
+                                <i class="fas fa-lock"></i>
+                                <span>Institution Login</span>
+                            </div>
+                        </div>
+                        <form id="loginForm" class="login-form">
+                            <div class="form-group">
+                                <label for="username" class="form-label">Username</label>
+                                <div class="input-container">
+                                    <i class="fas fa-user input-icon"></i>
+                                    <input type="text" id="username" name="username" class="form-input" placeholder="Enter username" required>
+                                    <div class="input-underline"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password</label>
+                                <div class="input-container">
+                                    <i class="fas fa-lock input-icon"></i>
+                                    <input type="password" id="password" name="password" class="form-input" placeholder="Enter password" required>
+                                    <div class="input-underline"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="institutionCode" class="form-label">Institution Code</label>
+                                <div class="input-container">
+                                    <i class="fas fa-building input-icon"></i>
+                                    <input type="text" id="institutionCode" name="institutionCode" class="form-input" placeholder="Enter institution code" required>
+                                    <div class="input-underline"></div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary login-btn">
+                                <span class="btn-text">Secure Login</span>
+                                <div class="btn-loader hidden">
+                                    <div class="rotating-lock">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-banner">
+            <div class="banner-content">
+                <div class="banner-slider" id="bannerSlider">
+                    <div class="banner-slide active">
+                        <i class="fas fa-digital-tachograph"></i>
+                        <span>Digital India Initiative - Secure Document Verification</span>
+                    </div>
+                    <div class="banner-slide">
+                        <i class="fas fa-shield-check"></i>
+                        <span>Blockchain Technology - Tamper-proof Verification</span>
+                    </div>
+                    <div class="banner-slide">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>National Education Policy - Authentic Credential System</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loading-content">
+            <div class="security-scanner">
+                <div class="scanner-line"></div>
+                <i class="fas fa-shield-check scanner-icon"></i>
+            </div>
+            <p class="loading-text">Authenticating...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

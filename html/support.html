@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & Help - SACVS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="theme-toggle-container">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo-container">
+                <i class="fas fa-shield-alt logo-icon"></i>
+                <span class="logo-text">SACVS</span>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a href="upload.html" class="nav-link">Verification</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <div class="support-header">
+            <h1 class="page-title">
+                <i class="fas fa-life-ring"></i>
+                Support & Help Center
+            </h1>
+            <p class="page-subtitle">Find answers to common questions and get assistance with document verification</p>
+        </div>
+
+        <div class="support-content">
+            <div class="content-grid">
+                <div class="support-card">
+                    <div class="card-header">
+                        <h2 class="section-title">
+                            <i class="fas fa-question-circle"></i>
+                            Frequently Asked Questions
+                        </h2>
+                    </div>
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>How does the blockchain verification work?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our system creates a unique digital fingerprint of each document and stores it on a tamper-proof blockchain network. This ensures that any modifications to the original document can be instantly detected during verification.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>What file formats are supported for upload?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We currently support PDF, PNG, and JPG file formats. Each file must be under 10MB in size and should be a clear, readable image of the original document.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>How long does the verification process take?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Most verifications are completed within 2-5 minutes. Complex documents or those requiring additional authentication may take up to 15 minutes.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Is my document data secure and private?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we use advanced encryption and only store document fingerprints, not the actual documents. All data is processed securely and in compliance with government privacy regulations.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span>What happens if a document fails verification?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>If a document fails verification, you'll receive a detailed report explaining the issues found. You can contact your institution or our support team for assistance in resolving any problems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="support-card">
+                    <div class="card-header">
+                        <h2 class="section-title">
+                            <i class="fas fa-envelope"></i>
+                            Contact Support
+                        </h2>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName" class="form-label">Full Name *</label>
+                                <input type="text" id="contactName" name="name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail" class="form-label">Email Address *</label>
+                                <input type="email" id="contactEmail" name="email" class="form-input" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactInstitution" class="form-label">Institution Name</label>
+                            <input type="text" id="contactInstitution" name="institution" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactCategory" class="form-label">Issue Category *</label>
+                            <select id="contactCategory" name="category" class="form-select" required>
+                                <option value="">Select Category</option>
+                                <option value="technical">Technical Issue</option>
+                                <option value="verification">Verification Problem</option>
+                                <option value="account">Account Access</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage" class="form-label">Message *</label>
+                            <textarea id="contactMessage" name="message" class="form-textarea" rows="5" placeholder="Please describe your issue in detail..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="help-resources">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>User Guide</h3>
+                        <p>Comprehensive guide on how to use the verification system</p>
+                        <a href="#" class="resource-link">Download PDF</a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Video Tutorials</h3>
+                        <p>Step-by-step video guides for common tasks</p>
+                        <a href="#" class="resource-link">Watch Videos</a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Phone Support</h3>
+                        <p>Talk to our support team directly</p>
+                        <a href="tel:1800-XXX-XXXX" class="resource-link">1800-XXX-XXXX</a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Live Chat</h3>
+                        <p>Get instant help through live chat</p>
+                        <button class="resource-link" id="liveChatBtn">Start Chat</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="system-status">
+                <div class="status-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-heartbeat"></i>
+                        System Status
+                    </h2>
+                </div>
+                <div class="status-grid">
+                    <div class="status-item">
+                        <div class="status-indicator online"></div>
+                        <div class="status-info">
+                            <span class="status-name">Verification System</span>
+                            <span class="status-value">Operational</span>
+                        </div>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-indicator online"></div>
+                        <div class="status-info">
+                            <span class="status-name">Blockchain Network</span>
+                            <span class="status-value">Operational</span>
+                        </div>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-indicator maintenance"></div>
+                        <div class="status-info">
+                            <span class="status-name">AI Analysis</span>
+                            <span class="status-value">Maintenance</span>
+                        </div>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-indicator online"></div>
+                        <div class="status-info">
+                            <span class="status-name">User Portal</span>
+                            <span class="status-value">Operational</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="chat-widget hidden" id="chatWidget">
+        <div class="chat-header">
+            <div class="chat-title">
+                <i class="fas fa-headset"></i>
+                Support Chat
+            </div>
+            <button class="chat-close" id="closeChatBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message bot">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>Hello! I'm here to help you with any questions about document verification. How can I assist you today?</p>
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Type your message..." class="chat-input-field">
+            <button id="sendChatBtn" class="chat-send-btn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="support.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Results - SACVS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="theme-toggle-container">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo-container">
+                <i class="fas fa-shield-alt logo-icon"></i>
+                <span class="logo-text">SACVS</span>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="upload.html" class="nav-link">
+                <i class="fas fa-upload"></i> New Verification
+            </a>
+            <a href="support.html" class="nav-link">Support</a>
+            <a href="index.html" class="nav-link" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <div class="results-header">
+            <h1 class="page-title">
+                <i class="fas fa-clipboard-check"></i>
+                Verification Results
+            </h1>
+            <div class="verification-id">
+                <span>Verification ID: </span>
+                <code id="verificationId">VRF-2024-001234</code>
+            </div>
+        </div>
+
+        <div class="results-container">
+            <div class="result-card" id="resultCard">
+                <div class="result-header">
+                    <div class="result-status verified" id="resultStatus">
+                        <div class="status-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="status-text">
+                            <h2>Document Verified</h2>
+                            <p class="status-subtitle">Authenticity confirmed through blockchain verification</p>
+                        </div>
+                    </div>
+                    <div class="result-timestamp">
+                        <i class="fas fa-clock"></i>
+                        <span id="verificationTime">Verified on: Jan 15, 2024 at 2:30 PM IST</span>
+                    </div>
+                </div>
+
+                <div class="document-details">
+                    <h3 class="section-title">
+                        <i class="fas fa-file-alt"></i>
+                        Document Information
+                    </h3>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <label>Document Type:</label>
+                            <span id="docType">Bachelor's Degree Certificate</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Institution:</label>
+                            <span id="institution">University of Technology</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Student Name:</label>
+                            <span id="studentName">John Doe</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Graduation Year:</label>
+                            <span id="gradYear">2023</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Document Hash:</label>
+                            <code id="docHash">0x1a2b3c4d5e6f...</code>
+                        </div>
+                        <div class="detail-item">
+                            <label>Blockchain Block:</label>
+                            <span id="blockNumber">#1,245,678</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verification-details">
+                    <h3 class="section-title">
+                        <i class="fas fa-shield-check"></i>
+                        Verification Analysis
+                    </h3>
+                    <div class="verification-grid">
+                        <div class="verification-item verified">
+                            <i class="fas fa-check-circle"></i>
+                            <div class="item-content">
+                                <h4>Digital Signature</h4>
+                                <p>Valid institutional signature verified</p>
+                            </div>
+                        </div>
+                        <div class="verification-item verified">
+                            <i class="fas fa-check-circle"></i>
+                            <div class="item-content">
+                                <h4>Document Integrity</h4>
+                                <p>No tampering or modifications detected</p>
+                            </div>
+                        </div>
+                        <div class="verification-item verified">
+                            <i class="fas fa-check-circle"></i>
+                            <div class="item-content">
+                                <h4>Institution Verification</h4>
+                                <p>Issuing institution authenticated</p>
+                            </div>
+                        </div>
+                        <div class="verification-item verified">
+                            <i class="fas fa-check-circle"></i>
+                            <div class="item-content">
+                                <h4>Blockchain Confirmation</h4>
+                                <p>Permanently recorded on blockchain</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="result-actions">
+                    <button class="btn btn-primary" id="downloadReport">
+                        <i class="fas fa-download"></i>
+                        Download Report
+                    </button>
+                    <button class="btn btn-secondary" id="generateQR">
+                        <i class="fas fa-qrcode"></i>
+                        Generate QR Code
+                    </button>
+                    <button class="btn btn-outline" id="shareResult">
+                        <i class="fas fa-share"></i>
+                        Share Result
+                    </button>
+                </div>
+            </div>
+
+            <div class="qr-section hidden" id="qrSection">
+                <div class="qr-card">
+                    <h3 class="section-title">
+                        <i class="fas fa-qrcode"></i>
+                        Verification QR Code
+                    </h3>
+                    <div class="qr-container">
+                        <div class="qr-code" id="qrCode">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                                <p>QR Code Generated</p>
+                            </div>
+                        </div>
+                        <p class="qr-description">
+                            Scan this QR code to instantly verify the authenticity of this document
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="future-features">
+            <div class="feature-card">
+                <div class="coming-soon-badge">
+                    <i class="fas fa-rocket"></i>
+                    Coming Soon
+                </div>
+                <h3>AI Fraud Detection</h3>
+                <p>Advanced machine learning algorithms to detect sophisticated document forgeries</p>
+            </div>
+            <div class="feature-card">
+                <div class="coming-soon-badge">
+                    <i class="fas fa-rocket"></i>
+                    Coming Soon
+                </div>
+                <h3>Smart Contract Integration</h3>
+                <p>Automated verification through blockchain smart contracts</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="results.js"></script>
+</body>
+</html>

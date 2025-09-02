@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SACVS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="theme-toggle-container">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+    </div>
+
+    <nav class="navbar admin-nav">
+        <div class="nav-brand">
+            <div class="logo-container">
+                <i class="fas fa-shield-alt logo-icon"></i>
+                <span class="logo-text">SACVS Admin</span>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#dashboard" class="nav-link active">
+                <i class="fas fa-tachometer-alt"></i> Dashboard
+            </a>
+            <a href="#institutions" class="nav-link">
+                <i class="fas fa-university"></i> Institutions
+            </a>
+            <a href="#reports" class="nav-link">
+                <i class="fas fa-chart-bar"></i> Reports
+            </a>
+            <a href="index.html" class="nav-link" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
+    </nav>
+
+    <main class="admin-container">
+        <div class="admin-header">
+            <h1 class="admin-title">
+                <i class="fas fa-cogs"></i>
+                Government Authority Dashboard
+            </h1>
+            <div class="admin-user">
+                <div class="user-avatar">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <div class="user-info">
+                    <span class="user-name">Administrator</span>
+                    <span class="user-role">System Authority</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon verified">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number" data-count="12456">0</h3>
+                    <p class="stat-label">Verified Documents</p>
+                    <div class="stat-trend positive">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>+15.3%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number" data-count="234">0</h3>
+                    <p class="stat-label">Flagged Documents</p>
+                    <div class="stat-trend negative">
+                        <i class="fas fa-arrow-down"></i>
+                        <span>-8.2%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon info">
+                    <i class="fas fa-university"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number" data-count="1287">0</h3>
+                    <p class="stat-label">Active Institutions</p>
+                    <div class="stat-trend positive">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>+3.7%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon primary">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number" data-count="567">0</h3>
+                    <p class="stat-label">Pending Reviews</p>
+                    <div class="stat-trend neutral">
+                        <i class="fas fa-minus"></i>
+                        <span>0%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="admin-content">
+            <div class="content-grid">
+                <div class="admin-card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fas fa-chart-line"></i>
+                            Verification Analytics
+                        </h3>
+                    </div>
+                    <div class="chart-container">
+                        <div class="chart-placeholder">
+                            <div class="chart-bars">
+                                <div class="bar" style="height: 60%"></div>
+                                <div class="bar" style="height: 80%"></div>
+                                <div class="bar" style="height: 45%"></div>
+                                <div class="bar" style="height: 90%"></div>
+                                <div class="bar" style="height: 70%"></div>
+                                <div class="bar" style="height: 55%"></div>
+                                <div class="bar" style="height: 85%"></div>
+                            </div>
+                            <div class="chart-labels">
+                                <span>Mon</span>
+                                <span>Tue</span>
+                                <span>Wed</span>
+                                <span>Thu</span>
+                                <span>Fri</span>
+                                <span>Sat</span>
+                                <span>Sun</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="admin-card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fas fa-exclamation-circle"></i>
+                            Recent Alerts
+                        </h3>
+                    </div>
+                    <div class="alerts-list">
+                        <div class="alert-item high">
+                            <div class="alert-icon">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                            <div class="alert-content">
+                                <h4>Suspicious Document Detected</h4>
+                                <p>University XYZ - Potential forgery flagged</p>
+                                <span class="alert-time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="alert-item medium">
+                            <div class="alert-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="alert-content">
+                                <h4>Unusual Activity Pattern</h4>
+                                <p>Multiple verifications from same IP</p>
+                                <span class="alert-time">4 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="alert-item low">
+                            <div class="alert-icon">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                            <div class="alert-content">
+                                <h4>System Maintenance Scheduled</h4>
+                                <p>Blockchain update planned for tomorrow</p>
+                                <span class="alert-time">1 day ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="management-section">
+                <div class="admin-card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fas fa-university"></i>
+                            Institution Management
+                        </h3>
+                        <button class="btn btn-primary btn-sm">
+                            <i class="fas fa-plus"></i>
+                            Add Institution
+                        </button>
+                    </div>
+                    <div class="table-container">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Institution Name</th>
+                                    <th>Status</th>
+                                    <th>Verifications</th>
+                                    <th>Last Active</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="institution-info">
+                                            <i class="fas fa-university"></i>
+                                            <span>University of Technology</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="status-badge active">Active</span>
+                                    </td>
+                                    <td>1,234</td>
+                                    <td>Today</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-icon edit">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="btn-icon delete">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="institution-info">
+                                            <i class="fas fa-university"></i>
+                                            <span>State Medical College</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="status-badge pending">Pending</span>
+                                    </td>
+                                    <td>0</td>
+                                    <td>N/A</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn-icon approve">
+                                                <i class="fas fa-check"></i>
+                                            </button>
+                                            <button class="btn-icon reject">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="audit-trail">
+                <div class="admin-card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fas fa-history"></i>
+                            Audit Trail
+                        </h3>
+                    </div>
+                    <div class="audit-list">
+                        <div class="audit-item">
+                            <div class="audit-timestamp">
+                                <i class="fas fa-clock"></i>
+                                <span>2024-01-15 14:30:25</span>
+                            </div>
+                            <div class="audit-action">
+                                <span class="action-type verification">Verification</span>
+                                <span>Document verified for University of Technology</span>
+                            </div>
+                            <div class="audit-user">Admin User</div>
+                        </div>
+                        <div class="audit-item">
+                            <div class="audit-timestamp">
+                                <i class="fas fa-clock"></i>
+                                <span>2024-01-15 13:45:12</span>
+                            </div>
+                            <div class="audit-action">
+                                <span class="action-type login">Login</span>
+                                <span>Institution login: State Medical College</span>
+                            </div>
+                            <div class="audit-user">System</div>
+                        </div>
+                        <div class="audit-item">
+                            <div class="audit-timestamp">
+                                <i class="fas fa-clock"></i>
+                                <span>2024-01-15 12:20:08</span>
+                            </div>
+                            <div class="audit-action">
+                                <span class="action-type alert">Alert</span>
+                                <span>Suspicious document flagged for review</span>
+                            </div>
+                            <div class="audit-user">AI System</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="future-modules">
+            <div class="module-card">
+                <div class="module-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="module-content">
+                    <h3>AI Fraud Detection</h3>
+                    <p>Advanced machine learning for document analysis</p>
+                    <div class="coming-soon">Coming Soon</div>
+                </div>
+            </div>
+            <div class="module-card">
+                <div class="module-icon">
+                    <i class="fas fa-link"></i>
+                </div>
+                <div class="module-content">
+                    <h3>Blockchain Integration</h3>
+                    <p>Smart contract automation and verification</p>
+                    <div class="coming-soon">Coming Soon</div>
+                </div>
+            </div>
+            <div class="module-card">
+                <div class="module-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="module-content">
+                    <h3>Mobile Verification</h3>
+                    <p>QR code scanning and instant verification</p>
+                    <div class="coming-soon">Coming Soon</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

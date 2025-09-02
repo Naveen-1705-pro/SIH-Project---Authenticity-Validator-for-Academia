@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Verification - SACVS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="theme-toggle-container">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo-container">
+                <i class="fas fa-shield-alt logo-icon"></i>
+                <span class="logo-text">SACVS</span>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a href="support.html" class="nav-link">Support</a>
+            <a href="#logout" class="nav-link" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <div class="verification-header">
+            <div class="institution-badge">
+                <i class="fas fa-university"></i>
+                <span id="institutionName">Institution Portal</span>
+            </div>
+            <div class="user-info">
+                <span id="userName">Welcome, User</span>
+            </div>
+        </div>
+
+        <div class="upload-section">
+            <div class="upload-card">
+                <div class="card-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-upload"></i>
+                        Document Verification
+                    </h2>
+                    <p class="section-subtitle">Upload academic credentials for blockchain verification</p>
+                </div>
+
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <div class="upload-icon">
+                            <i class="fas fa-file-upload"></i>
+                        </div>
+                        <h3 class="upload-title">Drop your document here</h3>
+                        <p class="upload-subtitle">or click to browse files</p>
+                        <div class="file-formats">
+                            <span class="format-tag">PDF</span>
+                            <span class="format-tag">PNG</span>
+                            <span class="format-tag">JPG</span>
+                        </div>
+                        <input type="file" id="fileInput" accept=".pdf,.png,.jpg,.jpeg" multiple hidden>
+                    </div>
+                    <div class="upload-border"></div>
+                </div>
+
+                <div class="uploaded-files" id="uploadedFiles"></div>
+
+                <div class="verification-progress hidden" id="verificationProgress">
+                    <div class="progress-header">
+                        <h3>Verification in Progress</h3>
+                        <div class="progress-percentage" id="progressText">0%</div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="verification-steps">
+                        <div class="step active" id="step1">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Document Uploaded</span>
+                        </div>
+                        <div class="step" id="step2">
+                            <i class="fas fa-search"></i>
+                            <span>Scanning Document</span>
+                        </div>
+                        <div class="step" id="step3">
+                            <i class="fas fa-shield-check"></i>
+                            <span>Blockchain Verification</span>
+                        </div>
+                        <div class="step" id="step4">
+                            <i class="fas fa-certificate"></i>
+                            <span>Generating Report</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-primary" id="verifyBtn" disabled>
+                        <i class="fas fa-shield-check"></i>
+                        Start Verification
+                    </button>
+                    <button class="btn btn-secondary" id="clearBtn">
+                        <i class="fas fa-times"></i>
+                        Clear All
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-panel">
+            <div class="info-card">
+                <h3 class="info-title">
+                    <i class="fas fa-info-circle"></i>
+                    Verification Guidelines
+                </h3>
+                <ul class="info-list">
+                    <li><i class="fas fa-check"></i> Upload original, unmodified documents</li>
+                    <li><i class="fas fa-check"></i> Ensure documents are clearly readable</li>
+                    <li><i class="fas fa-check"></i> Maximum file size: 10MB per document</li>
+                    <li><i class="fas fa-check"></i> Supported formats: PDF, PNG, JPG</li>
+                </ul>
+            </div>
+            
+            <div class="security-features">
+                <h3 class="info-title">
+                    <i class="fas fa-lock"></i>
+                    Security Features
+                </h3>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-fingerprint"></i>
+                        <span>Digital Fingerprinting</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-cube"></i>
+                        <span>Blockchain Storage</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-eye-slash"></i>
+                        <span>Tamper Detection</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Real-time Verification</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="govt-banner">
+        <div class="banner-content">
+            <div class="banner-slider" id="bannerSlider">
+                <div class="banner-slide active">
+                    <i class="fas fa-flag-india"></i>
+                    <span>Atmanirbhar Bharat - Self-Reliant Digital Verification</span>
+                </div>
+                <div class="banner-slide">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>National Education Policy 2020 - Quality Assurance</span>
+                </div>
+                <div class="banner-slide">
+                    <i class="fas fa-shield-virus"></i>
+                    <span>Cyber Safe India - Secure Document Verification</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="upload.js"></script>
+</body>
+</html>
